@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head lang="en">
+
+        <title>Liste des Etududiants</title>
+
+        <!--/*/ <th:block th:include="fragments/html_head :: head"></th:block> /*/-->
+    </head>
+    <body>
+        <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+            <br>
+        <div class="container">
+            <div th:if="${not #lists.isEmpty(etudiants)}">
+                <h2> Liste des Etududiants </h2>
+                <table class="table table-striped">
+                    <tr>
+                        <th>Numero </th>
+                        <th>Id matricule</th>
+                        <th>Nom</th>
+                        <th>Prénom(s)</th>
+                        <th>Voir</th>
+                        <th>Edit</th>
+                        <th>Supprimer</th>
+                    </tr>
+                    <tr th:each="etudiant : ${etudiants}">
+                        <td th:text="${etudiant.id}"><a href="/etudiant/${etudiant.id}">Id</a></td>
+                        <td th:text="${etudiant.matricule}"> Matricule </td>
+                        <td th:text="${etudiant.nom}">Nom</td>
+                        <td th:text="${etudiant.prenom}">Prenom</td>
+                        <td><a th:href="${ '/etudiant/' + etudiant.id}"> <i class="fas fa-info"></i> </a></td>
+                        <td><a th:href="${'/etudiant/edit/' + etudiant.id}"> <i class="fas fa-edit"></i> </a></td>
+                        <td><a th:href="${'/etudiant/delete/' + etudiant.id}"> <i class="fas fa-trash"></i> </a></td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </body>
+</html>

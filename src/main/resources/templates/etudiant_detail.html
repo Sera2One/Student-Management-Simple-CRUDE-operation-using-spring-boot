@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head lang="en">
+
+        <title>Spring Boot Exemple</title>
+
+        <!--/*/ <th:block th:include="fragments/html_head :: head"></th:block> /*/-->
+    </head>
+    <body>
+            <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+            <br>
+        </div>
+        <div class="container">    
+
+            <h2>Information sur l'étudiant </h2>
+                <div class="w-50">
+                    
+                    <table class="table">
+                        <tr>
+                          <th scope="row">Matricule</th>
+                          <td th:text="${etudiant.matricule}"></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Nom</th>
+                          <td th:text="${etudiant.nom}"></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Prenom(s)</th>
+                          <td th:text="${etudiant.prenom}"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Adress</th>
+                            <td th:text="${etudiant.adress}"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Age</th>
+                            <td th:text="${etudiant.age}"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Tel</th>
+                            <td th:text="${etudiant.tel}"></td>
+                        </tr>
+                    </table>
+
+
+            </div>
+        </div>
+    </body>
+</html>

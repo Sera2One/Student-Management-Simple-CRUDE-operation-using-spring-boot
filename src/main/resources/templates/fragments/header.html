@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head lang="en"></head>
+
+    <body>
+        <div class="container-fluid">
+            <div th:fragment="header">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <a class="navbar-brand" href="#" th:href="@{/}">Accueil</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarsExample10">
+                    <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                        <a href="#" th:href="@{/etudiants}" class="nav-link">Liste des éleves</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" th:href="@{/etudiant/new}" class="nav-link">Ajouter un eleve</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" th:href="@{/informations_sur_les_developpers}" class="nav-link">Information</a>
+                        </li>
+                        
+                    </ul>
+                    
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </body>
+</html>
+
